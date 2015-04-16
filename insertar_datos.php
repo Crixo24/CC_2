@@ -5,7 +5,7 @@
             if(isset($_POST["selectedNA"][$i]) && !empty($_POST["selectedNA"][$i]) &&
                isset($_POST["selectedApe"][$i]) && !empty($_POST["selectedApe"][$i])) {
                 // Si entramos es que todo se ha realizado correctamente
-                $link = mysql_connect("192.168.10.121","root","");
+                $link = mysql_connect("192.168.10.121","root","12345");
                 mysql_select_db("CC",$link);
             
                 $result=mysql_query("SELECT ID from Datos where ID= '{$_POST['selectedId'][$i]}'",$link);
